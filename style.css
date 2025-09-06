@@ -318,6 +318,12 @@ footer {
     color: #ff6600;          /* цвят на текста */
   }
   
+/* Скриване на бутон на големи екрани */
+.menu-toggle {
+  display: none; /* по подразбиране */
+}
+
+/* Мобилни устройства */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -325,19 +331,18 @@ footer {
     cursor: pointer;
     color: #ff6600;
     margin-bottom: 10px;
+    z-index: 1000;       /* да е над останалото */
+    user-select: none;
   }
 
   .navbar ul {
     display: none;
+    flex-direction: column;
+    gap: 10px;
   }
 
+  /* Правилно селектиране при добавяне на .active на navbar */
   .navbar.active ul {
     display: flex;
   }
-}
-
-
-/* Скриване на бутон на големи екрани */
-.menu-toggle {
-  display: none; /* по подразбиране не се вижда */
 }
