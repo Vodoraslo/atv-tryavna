@@ -320,7 +320,7 @@ footer {
   
 /* Скриване на бутон на големи екрани */
 .menu-toggle {
-  display: none; /* по подразбиране */
+  display: none; /* по подразбиране на десктоп */
 }
 
 /* Мобилни устройства */
@@ -331,18 +331,32 @@ footer {
     cursor: pointer;
     color: #ff6600;
     margin-bottom: 10px;
-    z-index: 1000;       /* да е над останалото */
+    z-index: 1000;
     user-select: none;
   }
 
   .navbar ul {
-    display: none;
+    display: none; /* скриване на менюто по подразбиране */
     flex-direction: column;
     gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
-  /* Правилно селектиране при добавяне на .active на navbar */
   .navbar.active ul {
-    display: flex;
+    display: flex; /* показване при клик */
   }
 }
+
+/* На десктоп менюто остава видимо */
+@media (min-width: 769px) {
+  .navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
