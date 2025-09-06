@@ -48,14 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "ArrowRight") showImage(currentIndex + 1);
         if (e.key === "Escape") lightbox.style.display = "none";
       }
-    });
-
-    const menuToggle = document.querySelector('.menu-toggle');
-const navbar = document.querySelector('.navbar');
-
-menuToggle.addEventListener('click', () => {
-  navbar.classList.toggle('active'); // превключва клас за показване на менюто
-});
+    })
 
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navbar = document.querySelector('.navbar');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active'); // превключва клас за показване на менюто
+  });
+});
+
   
