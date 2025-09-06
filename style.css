@@ -318,35 +318,6 @@ footer {
     color: #ff6600;          /* цвят на текста */
   }
   
-
-
-@media (max-width: 768px) {
-  .logo-img {
-    height: 60px; /* по-малко лого за мобилни */
-    margin-bottom: 10px;
-  }
-
-  .navbar {
-    flex-direction: column; /* менюто под логото */
-    align-items: center;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar ul li a {
-    font-size: 18px;
-  }
-}
-
-.menu-toggle {
-  display: none; /* по подразбиране скрито */
-}
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
