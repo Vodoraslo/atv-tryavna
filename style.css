@@ -320,23 +320,25 @@ footer {
   
 /* Скриване на бутон на големи екрани */
 .menu-toggle {
-  display: none; /* по подразбиране на десктоп */
+  display: none;
 }
 
 /* Мобилни устройства */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: block;        /* бутонът вече се вижда */
     font-size: 28px;
     cursor: pointer;
     color: #ff6600;
-    margin-bottom: 10px;
-    z-index: 1000;
+    z-index: 1000;         /* да е над другите елементи */
     user-select: none;
+    background: none;
+    border: none;
+    position: relative;    /* за z-index */
   }
 
   .navbar ul {
-    display: none; /* скриване на менюто по подразбиране */
+    display: none;         /* менюто скрито по подразбиране */
     flex-direction: column;
     gap: 10px;
     margin: 0;
@@ -345,11 +347,11 @@ footer {
   }
 
   .navbar.active ul {
-    display: flex; /* показване при клик */
+    display: flex;         /* показване при клик */
   }
 }
 
-/* На десктоп менюто остава видимо */
+/* Десктоп – менюто е винаги видимо */
 @media (min-width: 769px) {
   .navbar ul {
     display: flex;
