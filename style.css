@@ -318,43 +318,5 @@ footer {
     color: #ff6600;          /* цвят на текста */
   }
   
-/* Скриваме бутонa и менюто по подразбиране за голям екран */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #ff6600;
-}
-
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-
-/* Media query за малки екрани */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;  /* скриваме списъка */
-    flex-direction: column;
-    width: 100%;
-    background-color: rgba(255,255,255,0.95);
-    position: absolute;
-    top: 70px;
-    left: 0;
-  }
-
-  .nav-links li {
-    text-align: center;
-    margin: 15px 0;
-  }
-
-  .menu-toggle {
-    display: block; /* показваме бутона */
-  }
-
-  .nav-links.active {
-    display: flex; /* показваме менюто, когато е активно */
-  }
-}
 
 
