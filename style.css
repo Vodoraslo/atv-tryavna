@@ -320,25 +320,51 @@ footer {
   
 
 
-/* Скриване на списъка в малки екрани и показване на бутон */
 @media (max-width: 768px) {
-  .navbar ul {
-    display: none; /* Скриваме линковете */
-    flex-direction: column;
-    width: 100%;
+  .logo-img {
+    height: 60px; /* по-малко лого за мобилни */
+    margin-bottom: 10px;
   }
 
-  .navbar .menu-toggle {
-    display: block; /* Покажи бутон за мобилно меню */
+  .navbar {
+    flex-direction: column; /* менюто под логото */
+    align-items: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar ul li a {
+    font-size: 18px;
+  }
+}
+
+.menu-toggle {
+  display: none; /* по подразбиране скрито */
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
     font-size: 28px;
     cursor: pointer;
     color: #ff6600;
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    display: none;
   }
 
   .navbar.active ul {
-    display: flex; /* Показване на менюто при клик */
+    display: flex;
   }
 }
+
 
 /* Скриване на бутон на големи екрани */
 .menu-toggle {
