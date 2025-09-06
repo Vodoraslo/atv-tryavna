@@ -1,0 +1,322 @@
+/* Шрифтове */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: url('images/3.1.jpg') no-repeat center center;
+    background-size: cover; /* за да покрива целия екран */
+    background-color: #fff;
+    color: #111;
+}
+
+
+  
+
+/* Навигация */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff; /* бял фон */
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* леко сенки за отделяне */
+  }
+  
+
+.navbar .logo {
+  color: #ff6600;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #ff6600;
+}
+
+/* Hero секция */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero h1, .hero p, .hero .btn {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.btn {
+  background: #ff6600;
+  padding: 14px 28px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #cc5200;
+  transform: scale(1.05);
+}
+
+/* Секции */
+section {
+    background: rgba(255,255,255,0.85); /* прозрачен бял слой */
+    border-radius: 12px;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1000px;
+    color: #111;
+  }
+  
+
+h1, h2 {
+  text-align: center;
+  color: #ff6600;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+/* Галерия */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+/* Контактна форма */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+.contact-form button {
+  background: #ff6600;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #cc5200;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+
+/* Галерия */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  .lightbox-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Lightbox с бутони */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  .lightbox-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -30px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+    user-select: none;
+  }
+  
+  .prev {
+    left: 20px;
+  }
+  
+  .next {
+    right: 20px;
+  }
+  
+  .prev:hover, .next:hover {
+    color: #ff6600;
+  }
+  
+  .logo a {
+    display: flex;           /* подрежда изображението и текста на един ред */
+    align-items: center;     /* вертикално подравняване */
+    text-decoration: none;   /* премахва подчертаването на текста */
+    gap: 10px;               /* разстояние между лого и текст */
+  }
+  
+  .logo-img {
+    height: 80px;            /* размер на логото */
+    width: auto;
+  }
+  
+  .logo-text {
+    font-size: 24px;         /* размер на текста */
+    font-weight: bold;
+    color: #ff6600;          /* цвят на текста */
+  }
+  
+
+
