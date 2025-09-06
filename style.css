@@ -318,49 +318,29 @@ footer {
     color: #ff6600;          /* цвят на текста */
   }
   
-/* За екрани до 768px (телефони и малки таблети) */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column; /* Менюто под логото */
-    align-items: flex-start;
-    padding: 10px 20px;
-  }
 
+
+/* Скриване на списъка в малки екрани и показване на бутон */
+@media (max-width: 768px) {
   .navbar ul {
+    display: none; /* Скриваме линковете */
     flex-direction: column;
-    gap: 10px;
     width: 100%;
   }
 
-  .navbar ul li a {
-    font-size: 18px; /* по-малки линкове */
+  .navbar .menu-toggle {
+    display: block; /* Покажи бутон за мобилно меню */
+    font-size: 28px;
+    cursor: pointer;
+    color: #ff6600;
   }
 
-  .logo-img {
-    height: 80px; /* по-малко лого */
-  }
-
-  .hero h1 {
-    font-size: 36px; /* заглавие по-малко */
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .btn {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-
-  .gallery img {
-    height: 150px; /* по-малки снимки в галерията */
-  }
-
-  section {
-    padding: 20px;
-    margin: 10px;
+  .navbar.active ul {
+    display: flex; /* Показване на менюто при клик */
   }
 }
 
-
+/* Скриване на бутон на големи екрани */
+.menu-toggle {
+  display: none; /* по подразбиране не се вижда */
+}
